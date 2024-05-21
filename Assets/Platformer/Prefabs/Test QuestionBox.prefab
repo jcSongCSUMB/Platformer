@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1251118166124267621}
   - component: {fileID: 5295460769685778243}
   - component: {fileID: 352109896715891148}
+  - component: {fileID: 8271248124229361871}
   m_Layer: 0
   m_Name: Test QuestionBox
   m_TagString: Untagged
@@ -105,3 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8271248124229361871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169008037189299476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd9513d9ebf5d34c8a77776db1baefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionBlockMaterial: {fileID: 2100000, guid: 32ff4dd2be45ae24f9d64a8ee04b185c, type: 2}
+  animationSpeed: 1
+  currentTileIndex: 0
+  timer: 0
