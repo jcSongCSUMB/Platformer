@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float scrollSpeed = 5f;
+    public Transform target; 
+    public float smoothSpeed = 0.125f; 
+    public Vector3 offset; 
 
-    void Update()
+    private float initialY; 
+    private float initialZ; 
+
+    void Start()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        initialY = transform.position.y;
+        initialZ = transform.position.z;
+    }
+
+    void LateUpdate()
+    {
+        Vector3 targetPosition = new Vector3(target.position.x + offset.x, initialY, initialZ);
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothSpeed);
         
-        Vector3 newPosition = transform.position + new Vector3(horizontalInput * scrollSpeed * Time.deltaTime, 0, 0);
-        transform.position = newPosition;
+        transform.position = smoothedPosition;
     }
 }
 
